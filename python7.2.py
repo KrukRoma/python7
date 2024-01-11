@@ -3,7 +3,9 @@ def board_and_coordinates():
 
     x = int(input("Введіть рядок від 0 до 7 : "))
     y = int(input("Введіть стовбчик від 0 до 7 : "))
-
+     if x>8 or y>8:
+        print("Ви ввели невірні дані.")
+        return board_and_coordinates()
     coordinates = 0
     board[x][y] = coordinates
     return board, x, y, coordinates
